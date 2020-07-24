@@ -14,6 +14,30 @@ namespace cc {
     inline vector2<T>::vector2(T x, T y) : x(x), y(y) {
     }
 
+    // -- Component accesses --
+
+    template<class T>
+    inline T &vector2<T>::operator[](size_t i) {
+        switch (i) {
+            case 0:
+            default:
+                return x;
+            case 1:
+                return y;
+        }
+    }
+
+    template<class T>
+    inline const T &vector2<T>::operator[](size_t i) const {
+        switch (i) {
+            case 0:
+            default:
+                return x;
+            case 1:
+                return y;
+        }
+    }
+
     // -- Unary arithmetic operators --
 
     template<class T>

@@ -14,6 +14,38 @@ namespace cc {
     inline vector4<T>::vector4(T x, T y, T w, T h) : x(x), y(y), w(w), h(h) {
     }
 
+    // -- Component accesses --
+
+    template<class T>
+    inline T &vector4<T>::operator[](size_t i) {
+        switch (i) {
+            case 0:
+            default:
+                return x;
+            case 1:
+                return y;
+            case 2:
+                return w;
+            case 3:
+                return h;
+        }
+    }
+
+    template<class T>
+    inline const T &vector4<T>::operator[](size_t i) const {
+        switch (i) {
+            case 0:
+            default:
+                return x;
+            case 1:
+                return y;
+            case 2:
+                return w;
+            case 3:
+                return h;
+        }
+    }
+
     // -- Unary arithmetic operators --
 
     template<class T>

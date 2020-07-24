@@ -41,6 +41,12 @@ namespace cc {
 
         vector4(T x, T y, T w, T h);
 
+        // -- Component accesses --
+
+        T &operator[](size_t i);
+
+        const T &operator[](size_t i) const;
+
         // -- Unary arithmetic operators --
 
         vector4 &operator+=(const vector4 &v);
