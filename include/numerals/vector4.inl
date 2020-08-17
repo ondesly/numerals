@@ -4,6 +4,16 @@
 
 namespace cc {
 
+    // -- Implicit basic constructors --
+
+    template<class T>
+    inline vector4<T>::vector4() : x(), y(), w(), h() {
+    }
+
+    template<class T>
+    inline vector4<T>::vector4(const vector4 &v) : x(v.x), y(v.y), w(v.w), h(v.h) {
+    }
+
     // -- Explicit basic constructors --
 
     template<class T>
@@ -12,6 +22,24 @@ namespace cc {
 
     template<class T>
     inline vector4<T>::vector4(T x, T y, T w, T h) : x(x), y(y), w(w), h(h) {
+    }
+
+    // -- Destructor --
+
+    template<class T>
+    inline vector4<T>::~vector4() {
+    }
+
+    // -- Copy assignment --
+
+    template<class T>
+    inline vector4 <T> &vector4<T>::operator=(const vector4 &v) {
+        x = v.x;
+        y = v.y;
+        w = v.w;
+        h = v.h;
+
+        return *this;
     }
 
     // -- Component accesses --

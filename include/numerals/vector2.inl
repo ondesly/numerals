@@ -4,6 +4,16 @@
 
 namespace cc {
 
+    // -- Implicit basic constructors --
+
+    template<class T>
+    inline vector2<T>::vector2() : x(), y() {
+    }
+
+    template<class T>
+    inline vector2<T>::vector2(const vector2 &v) : x(v.x), y(v.y) {
+    }
+
     // -- Explicit basic constructors --
 
     template<class T>
@@ -12,6 +22,22 @@ namespace cc {
 
     template<class T>
     inline vector2<T>::vector2(T x, T y) : x(x), y(y) {
+    }
+
+    // -- Destructor --
+
+    template<class T>
+    inline vector2<T>::~vector2() {
+    }
+
+    // -- Copy assignment --
+
+    template<class T>
+    inline vector2 <T> &vector2<T>::operator=(const vector2 &v) {
+        x = v.x;
+        y = v.y;
+
+        return *this;
     }
 
     // -- Component accesses --

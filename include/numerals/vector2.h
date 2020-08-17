@@ -31,15 +31,23 @@ namespace cc {
 
         // -- Implicit basic constructors --
 
-        vector2() = default;
+        vector2();
 
-        vector2(const vector2 &) = default;
+        vector2(const vector2 &v);
 
         // -- Explicit basic constructors --
 
         explicit vector2(T s);
 
         vector2(T x, T y);
+
+        // -- Destructor --
+
+        ~vector2();
+
+        // -- Copy assignment --
+
+        vector2 &operator=(const vector2 &v);
 
         // -- Component accesses --
 
