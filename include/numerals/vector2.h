@@ -8,7 +8,7 @@
 
 namespace cc {
 
-    template<class T>
+    template<class T, class S = T>
     struct vector2 {
 
         // -- Data --
@@ -59,19 +59,19 @@ namespace cc {
 
         vector2 &operator+=(const vector2 &v);
 
-        vector2 &operator+=(T s);
+        vector2 &operator+=(S s);
 
         vector2 &operator-=(const vector2 &v);
 
-        vector2 &operator-=(T s);
+        vector2 &operator-=(S s);
 
         vector2 &operator*=(const vector2 &v);
 
-        vector2 &operator*=(T s);
+        vector2 &operator*=(S s);
 
         vector2 &operator/=(const vector2 &v);
 
-        vector2 &operator/=(T s);
+        vector2 &operator/=(S s);
 
     };
 
@@ -85,38 +85,38 @@ namespace cc {
 
     // -- Binary operators --
 
-    template<class T>
-    bool operator==(const cc::vector2<T> &v1, const cc::vector2<T> &v2);
+    template<class T, class S>
+    bool operator==(const cc::vector2<T, S> &v1, const cc::vector2<T, S> &v2);
 
-    template<class T>
-    bool operator!=(const cc::vector2<T> &v1, const cc::vector2<T> &v2);
+    template<class T, class S>
+    bool operator!=(const cc::vector2<T, S> &v1, const cc::vector2<T, S> &v2);
 
-    template<class T>
-    cc::vector2<T> operator+(const cc::vector2<T> &v1, const cc::vector2<T> &v2);
+    template<class T, class S>
+    cc::vector2<T, S> operator+(const cc::vector2<T, S> &v1, const cc::vector2<T, S> &v2);
 
-    template<class T>
-    cc::vector2<T> operator+(const cc::vector2<T> &v1, T s);
+    template<class T, class S>
+    cc::vector2<T, S> operator+(const cc::vector2<T, S> &v1, S s);
 
-    template<class T>
-    cc::vector2<T> operator-(const cc::vector2<T> &v1, const cc::vector2<T> &v2);
+    template<class T, class S>
+    cc::vector2<T, S> operator-(const cc::vector2<T, S> &v1, const cc::vector2<T, S> &v2);
 
-    template<class T>
-    cc::vector2<T> operator-(const cc::vector2<T> &v, T s);
+    template<class T, class S>
+    cc::vector2<T, S> operator-(const cc::vector2<T, S> &v, S s);
 
-    template<class T>
-    cc::vector2<T> operator*(const cc::vector2<T> &v1, const cc::vector2<T> &v2);
+    template<class T, class S>
+    cc::vector2<T, S> operator*(const cc::vector2<T, S> &v1, const cc::vector2<T, S> &v2);
 
-    template<class T>
-    cc::vector2<T> operator*(const cc::vector2<T> &v, T s);
+    template<class T, class S>
+    cc::vector2<T, S> operator*(const cc::vector2<T, S> &v, S s);
 
-    template<class T>
-    cc::vector2<T> operator/(T s, const cc::vector2<T> &v);
+    template<class T, class S>
+    cc::vector2<T, S> operator/(S s, const cc::vector2<T, S> &v);
 
-    template<class T>
-    cc::vector2<T> operator/(const cc::vector2<T> &v, T s);
+    template<class T, class S>
+    cc::vector2<T, S> operator/(const cc::vector2<T, S> &v, S s);
 
-    template<class T>
-    cc::vector2<T> operator/(const cc::vector2<T> &v1, const cc::vector2<T> &v2);
+    template<class T, class S>
+    cc::vector2<T, S> operator/(const cc::vector2<T, S> &v1, const cc::vector2<T, S> &v2);
 
 }
 
