@@ -23,7 +23,7 @@ namespace cc {
 
             struct {
 
-                T w, h;
+                T width, height;
 
             };
 
