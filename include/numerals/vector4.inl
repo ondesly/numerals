@@ -7,21 +7,21 @@ namespace cc {
     // -- Implicit basic constructors --
 
     template<class T>
-    inline vector4<T>::vector4() : x(), y(), w(), h() {
+    inline vector4<T>::vector4() : x(), y(), width(), height() {
     }
 
     template<class T>
-    inline vector4<T>::vector4(const vector4 &v) : x(v.x), y(v.y), w(v.w), h(v.h) {
+    inline vector4<T>::vector4(const vector4 &v) : x(v.x), y(v.y), width(v.width), height(v.height) {
     }
 
     // -- Explicit basic constructors --
 
     template<class T>
-    inline vector4<T>::vector4(T s) : x(s), y(s), w(s), h(s) {
+    inline vector4<T>::vector4(T s) : x(s), y(s), width(s), height(s) {
     }
 
     template<class T>
-    inline vector4<T>::vector4(T x, T y, T w, T h) : x(x), y(y), w(w), h(h) {
+    inline vector4<T>::vector4(T x, T y, T width, T height) : x(x), y(y), width(width), height(height) {
     }
 
     // -- Destructor --
@@ -36,8 +36,8 @@ namespace cc {
     inline vector4 <T> &vector4<T>::operator=(const vector4 &v) {
         x = v.x;
         y = v.y;
-        w = v.w;
-        h = v.h;
+        width = v.width;
+        height = v.height;
 
         return *this;
     }
@@ -53,9 +53,9 @@ namespace cc {
             case 1:
                 return y;
             case 2:
-                return w;
+                return width;
             case 3:
-                return h;
+                return height;
         }
     }
 
@@ -68,9 +68,9 @@ namespace cc {
             case 1:
                 return y;
             case 2:
-                return w;
+                return width;
             case 3:
-                return h;
+                return height;
         }
     }
 
@@ -78,49 +78,49 @@ namespace cc {
 
     template<class T>
     inline vector4 <T> &vector4<T>::operator+=(const vector4 <T> &v) {
-        return *this = vector4(x + v.x, y + v.y, w + v.w, h + v.h);
+        return *this = vector4(x + v.x, y + v.y, width + v.width, height + v.height);
     }
 
     template<class T>
     inline vector4 <T> &vector4<T>::operator+=(T s) {
-        return *this = vector4(x + s, y + s, w + s, h + s);
+        return *this = vector4(x + s, y + s, width + s, height + s);
     }
 
     template<class T>
     inline vector4 <T> &vector4<T>::operator-=(const vector4 <T> &v) {
-        return *this = vector4(x - v.x, y - v.y, w - v.w, h - v.h);
+        return *this = vector4(x - v.x, y - v.y, width - v.width, height - v.height);
     }
 
     template<class T>
     inline vector4 <T> &vector4<T>::operator-=(T s) {
-        return *this = vector4(x - s, y - s, w - s, h - s);
+        return *this = vector4(x - s, y - s, width - s, height - s);
     }
 
     template<class T>
     inline vector4 <T> &vector4<T>::operator*=(const vector4 <T> &v) {
-        return *this = vector4(x * v.x, y * v.y, w * v.w, h * v.h);
+        return *this = vector4(x * v.x, y * v.y, width * v.width, height * v.height);
     }
 
     template<class T>
     inline vector4 <T> &vector4<T>::operator*=(T s) {
-        return *this = vector4(x * s, y * s, w * s, h * s);
+        return *this = vector4(x * s, y * s, width * s, height * s);
     }
 
     template<class T>
     inline vector4 <T> &vector4<T>::operator/=(const vector4 <T> &v) {
-        return *this = vector4(x / v.x, y / v.y, w / v.w, h / v.h);
+        return *this = vector4(x / v.x, y / v.y, width / v.width, height / v.height);
     }
 
     template<class T>
     inline vector4 <T> &vector4<T>::operator/=(T s) {
-        return *this = vector4(x / s, y / s, w / s, h / s);
+        return *this = vector4(x / s, y / s, width / s, height / s);
     }
 
     // -- Binary operators --
 
     template<class T>
     inline bool operator==(const vector4 <T> &v1, const vector4 <T> &v2) {
-        return v1.x == v2.x && v1.y == v2.y && v1.w == v2.w && v1.h == v2.h;
+        return v1.x == v2.x && v1.y == v2.y && v1.width == v2.width && v1.height == v2.height;
     }
 
     template<class T>
@@ -160,7 +160,7 @@ namespace cc {
 
     template<class T>
     inline vector4 <T> operator/(T s, const vector4 <T> &v) {
-        return {s / v.x, s / v.y, s / v.w, s / v.h};
+        return {s / v.x, s / v.y, s / v.width, s / v.height};
     }
 
     template<class T>

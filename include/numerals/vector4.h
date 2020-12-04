@@ -17,7 +17,7 @@ namespace cc {
 
             struct {
 
-                T x, y, w, h;
+                T x, y, width, height;
 
             };
 
@@ -39,7 +39,7 @@ namespace cc {
 
         explicit vector4(T s);
 
-        vector4(T x, T y, T w, T h);
+        vector4(T x, T y, T width, T height);
 
         // -- Destructor --
 
