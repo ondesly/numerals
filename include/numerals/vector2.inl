@@ -85,6 +85,16 @@ namespace cc {
     }
 
     template<class T, class S>
+    inline vector2 <T, S> &vector2<T, S>::operator-() {
+        return *this = vector2(-x, -y);
+    }
+
+    template<class T, class S>
+    inline vector2 <T, S> vector2<T, S>::operator-() const {
+        return vector2(-x, -y);
+    }
+
+    template<class T, class S>
     inline vector2 <T, S> &vector2<T, S>::operator-=(const vector2 <T, S> &v) {
         return *this = vector2(x - v.x, y - v.y);
     }

@@ -66,6 +66,10 @@ namespace cc {
 
         vector2 &operator+=(S s);
 
+        vector2 &operator-();
+
+        vector2 operator-() const;
+
         vector2 &operator-=(const vector2 &v);
 
         vector2 &operator-=(S s);
