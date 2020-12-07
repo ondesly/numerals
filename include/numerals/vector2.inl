@@ -124,6 +124,23 @@ namespace cc {
         return *this = vector2(x / s, y / s);
     }
 
+    // -- Vector operations --
+
+    template<class T, class S>
+    inline T vector2<T, S>::get_length() const {
+        return std::sqrt(x * x + y * y);
+    }
+
+    template<class T, class S>
+    inline T vector2<T, S>::get_distance(const vector2 <T, S> &v) const {
+        return (*this - v).get_length();
+    }
+
+    template<class T, class S>
+    inline vector2 <T, S> vector2<T, S>::get_midpoint(const vector2 <T, S> &v) const {
+        return vector2((x + v.x) / 2.F, (y + v.y) / 2.F);
+    }
+
     // -- Binary operators --
 
     template<class T, class S>

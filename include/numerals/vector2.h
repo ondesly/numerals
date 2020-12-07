@@ -82,6 +82,14 @@ namespace cc {
 
         vector2 &operator/=(S s);
 
+        // -- Vector operations --
+
+        T get_length() const;
+
+        T get_distance(const vector2 &v) const;
+
+        vector2 get_midpoint(const vector2 &v) const;
+
     };
 
     // -- Types --
