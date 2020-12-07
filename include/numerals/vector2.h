@@ -4,7 +4,8 @@
 
 #pragma once
 
-#include <cstddef>
+#include <cmath>
+#include <limits>
 
 namespace cc {
 
@@ -48,6 +49,10 @@ namespace cc {
         // -- Copy assignment --
 
         vector2 &operator=(const vector2 &v);
+
+        // -- Comparison --
+
+        bool equals(const vector2 &v) const;
 
         // -- Component accesses --
 

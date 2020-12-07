@@ -40,6 +40,14 @@ namespace cc {
         return *this;
     }
 
+    // -- Comparison --
+
+    template<class T, class S>
+    bool vector2<T, S>::equals(const vector2 &v) const {
+        return (std::abs(x - v.x) < std::numeric_limits<T>::epsilon())
+                && (std::abs(y - v.y) < std::numeric_limits<T>::epsilon());
+    }
+
     // -- Component accesses --
 
     template<class T, class S>
