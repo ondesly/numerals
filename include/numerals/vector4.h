@@ -78,6 +78,10 @@ namespace cc {
 
         vector4 &operator=(const vector4 &v);
 
+        // -- Comparison --
+
+        bool equals(const vector4 &v) const;
+
         // -- Component accesses --
 
         T &operator[](size_t i);

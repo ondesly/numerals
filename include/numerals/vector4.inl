@@ -50,6 +50,13 @@ namespace cc {
         return *this;
     }
 
+    // -- Comparison --
+
+    template<class T>
+    bool vector4<T>::equals(const vector4 &v) const {
+        return origin.equals(v.origin) && size.equals(v.size);
+    }
+
     // -- Component accesses --
 
     template<class T>
