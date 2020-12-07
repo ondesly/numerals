@@ -9,6 +9,7 @@
 #pragma once
 
 #include <cstddef>
+#include "numerals/vector2.h"
 
 namespace cc {
 
@@ -21,13 +22,35 @@ namespace cc {
 
             struct {
 
-                T x, y, width, height;
+                T x, y;
+
+                union {
+
+                    struct {
+
+                        T width, height;
+
+                    };
+
+                    struct {
+
+                        T z, w;
+
+                    };
+
+                };
 
             };
 
             struct {
 
                 T left, bottom, right, top;
+
+            };
+
+            struct {
+
+                vector2<T> origin, size;
 
             };
 
@@ -44,6 +67,8 @@ namespace cc {
         explicit vector4(T s);
 
         vector4(T x, T y, T width, T height);
+
+        vector4(const vector2<T> &o, const vector2<T> &s);
 
         // -- Destructor --
 

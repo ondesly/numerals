@@ -28,6 +28,10 @@ namespace cc {
     inline vector4<T>::vector4(T x, T y, T width, T height) : x(x), y(y), width(width), height(height) {
     }
 
+    template<class T>
+    inline vector4<T>::vector4(const vector2 <T> &o, const vector2 <T> &s) : origin(o), size(s) {
+    }
+
     // -- Destructor --
 
     template<class T>
