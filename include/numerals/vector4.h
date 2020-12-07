@@ -8,7 +8,8 @@
 
 #pragma once
 
-#include <cstddef>
+#include <algorithm>
+
 #include "numerals/vector2.h"
 
 namespace cc {
@@ -105,6 +106,20 @@ namespace cc {
         vector4 &operator/=(const vector4 &v);
 
         vector4 &operator/=(T s);
+
+        // Rectangle operations
+
+        T get_min_x() const;
+
+        T get_max_x() const;
+
+        T get_min_y() const;
+
+        T get_max_y() const;
+
+        void merge(const vector4 &v);
+
+        bool contains(const vector2<T> &v) const;
 
     };
 

@@ -131,6 +131,42 @@ namespace cc {
         return *this = vector4(x / s, y / s, width / s, height / s);
     }
 
+    // Rectangle operations
+
+    template<class T>
+    T vector4<T>::get_min_x() const {
+        return origin.x;
+    }
+
+    template<class T>
+    T vector4<T>::get_max_x() const {
+        return origin.x + size.width;
+    }
+
+    template<class T>
+    T vector4<T>::get_min_y() const {
+        return origin.y;
+    }
+
+    template<class T>
+    T vector4<T>::get_max_y() const {
+        return origin.y + size.height;
+    }
+
+    template<class T>
+    inline void vector4<T>::merge(const vector4 &v) {
+        const T min_x = std::min(get_min_x(), v.get_min_x());
+        const T min_y = std::min(get_min_y(), v.get_min_y());
+        const T max_x = std::max(get_max_x(), v.get_max_x());
+        const T max_y = std::max(get_max_y(), v.get_max_y());
+        *this = {min_x, min_y, max_x - min_x, max_y - min_y};
+    }
+
+    template<class T>
+    inline bool vector4<T>::contains(const vector2 <T> &v) const {
+        return v.x >= get_min_x() && v.x <= get_max_x() && v.y >= get_min_y() && v.y <= get_max_y();
+    }
+
     // -- Binary operators --
 
     template<class T>
