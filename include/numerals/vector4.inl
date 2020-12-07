@@ -1,5 +1,9 @@
 //
-// Created by Dmitrii Torkhov <dmitriitorkhov@gmail.com> on 28.06.2020.
+//  vector4.inl
+//  numerals
+//
+//  Created by Dmitrii Torkhov <dmitriitorkhov@gmail.com> on 28.06.2020.
+//  Copyright © 2020 Dmitrii Torkhov. All rights reserved.
 //
 
 namespace cc {
