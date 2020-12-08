@@ -26,6 +26,8 @@ target_include_directories(numerals INTERFACE
 set(PUBLIC_HEADERS 
     include/numerals/vector2.h
     include/numerals/vector2.inl
+    include/numerals/vector3.h
+    include/numerals/vector3.inl
     include/numerals/vector4.h
     include/numerals/vector4.inl)
 
