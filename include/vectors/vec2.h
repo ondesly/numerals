@@ -96,14 +96,6 @@ namespace cc {
 
     };
 
-    // -- Types --
-
-    using float2 = vec2<float>;
-
-    using int2 = vec2<int>;
-
-    using size_t2 = vec2<size_t>;
-
     // -- Binary operators --
 
     template<class T, class S>

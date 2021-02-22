@@ -123,14 +123,6 @@ namespace cc {
 
     };
 
-    // -- Types --
-
-    using float4 = vec4<float>;
-
-    using int4 = vec4<int>;
-
-    using size_t4 = vec4<size_t>;
-
     // -- Binary operators --
 
     template<class T>
