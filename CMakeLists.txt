@@ -9,7 +9,7 @@
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
 project(vectors
-        VERSION 0.1
+        VERSION 1.1
         LANGUAGES CXX)
 
 #
