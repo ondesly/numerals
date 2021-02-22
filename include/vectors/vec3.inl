@@ -6,7 +6,7 @@
 //  Copyright © 2020-2021 Dmitrii Torkhov. All rights reserved.
 //
 
-namespace cc {
+namespace oo {
 
     // -- Implicit basic constructors --
 

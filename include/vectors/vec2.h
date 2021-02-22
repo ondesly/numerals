@@ -11,7 +11,7 @@
 #include <cmath>
 #include <limits>
 
-namespace cc {
+namespace oo {
 
     template<class T, class S = T>
     struct vec2 {
@@ -99,37 +99,37 @@ namespace cc {
     // -- Binary operators --
 
     template<class T, class S>
-    bool operator==(const cc::vec2<T, S> &v1, const cc::vec2<T, S> &v2);
+    bool operator==(const oo::vec2<T, S> &v1, const oo::vec2<T, S> &v2);
 
     template<class T, class S>
-    bool operator!=(const cc::vec2<T, S> &v1, const cc::vec2<T, S> &v2);
+    bool operator!=(const oo::vec2<T, S> &v1, const oo::vec2<T, S> &v2);
 
     template<class T, class S>
-    cc::vec2<T, S> operator+(const cc::vec2<T, S> &v1, const cc::vec2<T, S> &v2);
+    oo::vec2<T, S> operator+(const oo::vec2<T, S> &v1, const oo::vec2<T, S> &v2);
 
     template<class T, class S>
-    cc::vec2<T, S> operator+(const cc::vec2<T, S> &v1, S s);
+    oo::vec2<T, S> operator+(const oo::vec2<T, S> &v1, S s);
 
     template<class T, class S>
-    cc::vec2<T, S> operator-(const cc::vec2<T, S> &v1, const cc::vec2<T, S> &v2);
+    oo::vec2<T, S> operator-(const oo::vec2<T, S> &v1, const oo::vec2<T, S> &v2);
 
     template<class T, class S>
-    cc::vec2<T, S> operator-(const cc::vec2<T, S> &v, S s);
+    oo::vec2<T, S> operator-(const oo::vec2<T, S> &v, S s);
 
     template<class T, class S>
-    cc::vec2<T, S> operator*(const cc::vec2<T, S> &v1, const cc::vec2<T, S> &v2);
+    oo::vec2<T, S> operator*(const oo::vec2<T, S> &v1, const oo::vec2<T, S> &v2);
 
     template<class T, class S>
-    cc::vec2<T, S> operator*(const cc::vec2<T, S> &v, S s);
+    oo::vec2<T, S> operator*(const oo::vec2<T, S> &v, S s);
 
     template<class T, class S>
-    cc::vec2<T, S> operator/(S s, const cc::vec2<T, S> &v);
+    oo::vec2<T, S> operator/(S s, const oo::vec2<T, S> &v);
 
     template<class T, class S>
-    cc::vec2<T, S> operator/(const cc::vec2<T, S> &v, S s);
+    oo::vec2<T, S> operator/(const oo::vec2<T, S> &v, S s);
 
     template<class T, class S>
-    cc::vec2<T, S> operator/(const cc::vec2<T, S> &v1, const cc::vec2<T, S> &v2);
+    oo::vec2<T, S> operator/(const oo::vec2<T, S> &v1, const oo::vec2<T, S> &v2);
 
 }
 

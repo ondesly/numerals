@@ -10,7 +10,7 @@
 
 #include <cmath>
 
-namespace cc {
+namespace oo {
 
     template<class T>
     struct vec3 {
@@ -98,40 +98,40 @@ namespace cc {
     // -- Binary operators --
 
     template<class T>
-    bool operator==(const cc::vec3<T> &v1, const cc::vec3<T> &v2);
+    bool operator==(const oo::vec3<T> &v1, const oo::vec3<T> &v2);
 
     template<class T>
-    bool operator!=(const cc::vec3<T> &v1, const cc::vec3<T> &v2);
+    bool operator!=(const oo::vec3<T> &v1, const oo::vec3<T> &v2);
 
     template<class T>
-    cc::vec3<T> operator+(const cc::vec3<T> &v1, const cc::vec3<T> &v2);
+    oo::vec3<T> operator+(const oo::vec3<T> &v1, const oo::vec3<T> &v2);
 
     template<class T>
-    cc::vec3<T> operator+(const cc::vec3<T> &v1, T s);
+    oo::vec3<T> operator+(const oo::vec3<T> &v1, T s);
 
     template<class T>
-    cc::vec3<T> operator-(const cc::vec3<T> &v1, const cc::vec3<T> &v2);
+    oo::vec3<T> operator-(const oo::vec3<T> &v1, const oo::vec3<T> &v2);
 
     template<class T>
-    cc::vec3<T> operator-(const cc::vec3<T> &v, T s);
+    oo::vec3<T> operator-(const oo::vec3<T> &v, T s);
 
     template<class T>
-    cc::vec3<T> operator*(T s, const cc::vec3<T> &v);
+    oo::vec3<T> operator*(T s, const oo::vec3<T> &v);
 
     template<class T>
-    cc::vec3<T> operator*(const cc::vec3<T> &v1, const cc::vec3<T> &v2);
+    oo::vec3<T> operator*(const oo::vec3<T> &v1, const oo::vec3<T> &v2);
 
     template<class T>
-    cc::vec3<T> operator*(const cc::vec3<T> &v, T s);
+    oo::vec3<T> operator*(const oo::vec3<T> &v, T s);
 
     template<class T>
-    cc::vec3<T> operator/(T s, const cc::vec3<T> &v);
+    oo::vec3<T> operator/(T s, const oo::vec3<T> &v);
 
     template<class T>
-    cc::vec3<T> operator/(const cc::vec3<T> &v, T s);
+    oo::vec3<T> operator/(const oo::vec3<T> &v, T s);
 
     template<class T>
-    cc::vec3<T> operator/(const cc::vec3<T> &v1, const cc::vec3<T> &v2);
+    oo::vec3<T> operator/(const oo::vec3<T> &v1, const oo::vec3<T> &v2);
 
 }
 

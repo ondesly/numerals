@@ -12,7 +12,7 @@
 
 #include "vectors/vec2.h"
 
-namespace cc {
+namespace oo {
 
     template<class T>
     struct vec4 {
@@ -126,37 +126,37 @@ namespace cc {
     // -- Binary operators --
 
     template<class T>
-    bool operator==(const cc::vec4<T> &v1, const cc::vec4<T> &v2);
+    bool operator==(const oo::vec4<T> &v1, const oo::vec4<T> &v2);
 
     template<class T>
-    bool operator!=(const cc::vec4<T> &v1, const cc::vec4<T> &v2);
+    bool operator!=(const oo::vec4<T> &v1, const oo::vec4<T> &v2);
 
     template<class T>
-    cc::vec4<T> operator+(const cc::vec4<T> &v1, const cc::vec4<T> &v2);
+    oo::vec4<T> operator+(const oo::vec4<T> &v1, const oo::vec4<T> &v2);
 
     template<class T>
-    cc::vec4<T> operator+(const cc::vec4<T> &v1, T s);
+    oo::vec4<T> operator+(const oo::vec4<T> &v1, T s);
 
     template<class T>
-    cc::vec4<T> operator-(const cc::vec4<T> &v1, const cc::vec4<T> &v2);
+    oo::vec4<T> operator-(const oo::vec4<T> &v1, const oo::vec4<T> &v2);
 
     template<class T>
-    cc::vec4<T> operator-(const cc::vec4<T> &v, T s);
+    oo::vec4<T> operator-(const oo::vec4<T> &v, T s);
 
     template<class T>
-    cc::vec4<T> operator*(const cc::vec4<T> &v1, const cc::vec4<T> &v2);
+    oo::vec4<T> operator*(const oo::vec4<T> &v1, const oo::vec4<T> &v2);
 
     template<class T>
-    cc::vec4<T> operator*(const cc::vec4<T> &v, T s);
+    oo::vec4<T> operator*(const oo::vec4<T> &v, T s);
 
     template<class T>
-    cc::vec4<T> operator/(float f, const cc::vec4<T> &v);
+    oo::vec4<T> operator/(float f, const oo::vec4<T> &v);
 
     template<class T>
-    cc::vec4<T> operator/(const cc::vec4<T> &v, T s);
+    oo::vec4<T> operator/(const oo::vec4<T> &v, T s);
 
     template<class T>
-    cc::vec4<T> operator/(const cc::vec4<T> &v1, const cc::vec4<T> &v2);
+    oo::vec4<T> operator/(const oo::vec4<T> &v1, const oo::vec4<T> &v2);
 
 }
 
