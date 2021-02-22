@@ -39,3 +39,13 @@ install(TARGETS vectors
 install(FILES ${PUBLIC_HEADERS} DESTINATION include/vectors)
 
 install(EXPORT vectors-config DESTINATION lib/cmake/vectors)
+
+###########
+# Testing #
+###########
+
+enable_testing()
+
+if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
+    add_subdirectory(tests)
+endif ()
