@@ -17,7 +17,7 @@ set_target_properties(test_vec2 PROPERTIES
         CXX_STANDARD_REQUIRED YES
         CXX_EXTENSIONS NO)
 
-target_link_libraries(test_vec2 PRIVATE oo::vectors)
+target_link_libraries(test_vec2 PRIVATE vectors)
 
 add_test(NAME TestVec2 COMMAND test_vec2)
 
@@ -30,7 +30,7 @@ set_target_properties(test_vec3 PROPERTIES
         CXX_STANDARD_REQUIRED YES
         CXX_EXTENSIONS NO)
 
-target_link_libraries(test_vec3 PRIVATE oo::vectors)
+target_link_libraries(test_vec3 PRIVATE vectors)
 
 add_test(NAME TestVec3 COMMAND test_vec3)
 
@@ -43,6 +43,6 @@ set_target_properties(test_vec4 PROPERTIES
         CXX_STANDARD_REQUIRED YES
         CXX_EXTENSIONS NO)
 
-target_link_libraries(test_vec4 PRIVATE oo::vectors)
+target_link_libraries(test_vec4 PRIVATE vectors)
 
 add_test(NAME TestVec4 COMMAND test_vec4)

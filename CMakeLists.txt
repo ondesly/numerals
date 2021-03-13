@@ -16,8 +16,6 @@ project(vectors
 
 add_library(vectors INTERFACE)
 
-add_library(oo::vectors ALIAS vectors)
-
 target_include_directories(vectors INTERFACE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>
         $<INSTALL_INTERFACE:include>)
