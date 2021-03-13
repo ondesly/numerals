@@ -8,41 +8,20 @@
 
 project(tests)
 
-# TestVec2
+#
 
-add_executable(test_vec2 test_vec2.cpp)
+function(add name)
+    add_executable(${name} ${name}.cpp)
 
-set_target_properties(test_vec2 PROPERTIES
-        CXX_STANDARD 17
-        CXX_STANDARD_REQUIRED YES
-        CXX_EXTENSIONS NO)
+    target_link_libraries(${name} vectors)
 
-target_link_libraries(test_vec2 PRIVATE vectors)
+    set_target_properties(${name} PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED YES CXX_EXTENSIONS NO)
 
-add_test(NAME TestVec2 COMMAND test_vec2)
+    add_test(NAME ${name} COMMAND ${name})
+endfunction()
 
-# TestVec3
+#
 
-add_executable(test_vec3 test_vec3.cpp)
-
-set_target_properties(test_vec3 PROPERTIES
-        CXX_STANDARD 17
-        CXX_STANDARD_REQUIRED YES
-        CXX_EXTENSIONS NO)
-
-target_link_libraries(test_vec3 PRIVATE vectors)
-
-add_test(NAME TestVec3 COMMAND test_vec3)
-
-# TestVec4
-
-add_executable(test_vec4 test_vec4.cpp)
-
-set_target_properties(test_vec4 PROPERTIES
-        CXX_STANDARD 17
-        CXX_STANDARD_REQUIRED YES
-        CXX_EXTENSIONS NO)
-
-target_link_libraries(test_vec4 PRIVATE vectors)
-
-add_test(NAME TestVec4 COMMAND test_vec4)
+add("test_vec2")
+add("test_vec3")
+add("test_vec4")
