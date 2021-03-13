@@ -31,7 +31,7 @@ namespace oo {
     // -- Destructor --
 
     template<class T>
-    inline vec3<T>::~vec3() = default;
+    inline vec3<T>::~vec3() {};
 
     // -- Copy assignment --
 
@@ -49,8 +49,8 @@ namespace oo {
     template<class T>
     bool vec3<T>::equals(const vec3 &v) const {
         return (std::abs(x - v.x) < std::numeric_limits<T>::epsilon())
-                && (std::abs(y - v.y) < std::numeric_limits<T>::epsilon())
-                && (std::abs(z - v.z) < std::numeric_limits<T>::epsilon());
+               && (std::abs(y - v.y) < std::numeric_limits<T>::epsilon())
+               && (std::abs(z - v.z) < std::numeric_limits<T>::epsilon());
     }
 
     // -- Component accesses --

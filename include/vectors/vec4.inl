@@ -35,7 +35,7 @@ namespace oo {
     // -- Destructor --
 
     template<class T>
-    inline vec4<T>::~vec4() = default;
+    inline vec4<T>::~vec4() {};
 
     // -- Copy assignment --
 
