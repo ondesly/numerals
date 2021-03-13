@@ -12,31 +12,39 @@ project(vectors
         VERSION 1.1
         LANGUAGES CXX)
 
-#
+#########
+# Build #
+#########
 
 add_library(vectors INTERFACE)
 
-target_include_directories(vectors INTERFACE
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>
-        $<INSTALL_INTERFACE:include>)
-
 #
 
+set(INCLUDE_DIR ${CMAKE_CURRENT_LIST_DIR}/include)
+
 set(PUBLIC_HEADERS
-        include/vectors/vec2.h
-        include/vectors/vec2.inl
-        include/vectors/vec3.h
-        include/vectors/vec3.inl
-        include/vectors/vec4.h
-        include/vectors/vec4.inl)
+        ${INCLUDE_DIR}/vectors/vec2.h
+        ${INCLUDE_DIR}/vectors/vec2.inl
+        ${INCLUDE_DIR}/vectors/vec3.h
+        ${INCLUDE_DIR}/vectors/vec3.inl
+        ${INCLUDE_DIR}/vectors/vec4.h
+        ${INCLUDE_DIR}/vectors/vec4.inl)
 
-install(TARGETS vectors
-        EXPORT vectors-config
-        INCLUDES DESTINATION include)
+set_target_properties(vectors PROPERTIES PUBLIC_HEADER "${PUBLIC_HEADERS}")
 
-install(FILES ${PUBLIC_HEADERS} DESTINATION include/vectors)
+target_include_directories(vectors INTERFACE $<BUILD_INTERFACE:${INCLUDE_DIR}> $<INSTALL_INTERFACE:include>)
 
-install(EXPORT vectors-config DESTINATION lib/cmake/vectors)
+###########
+# Install #
+###########
+
+include(GNUInstallDirs)
+
+install(TARGETS ${PROJECT_NAME}
+        EXPORT ${PROJECT_NAME}-config
+        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}${INSTALL_SUFFIX}/${PROJECT_NAME})
+
+install(EXPORT ${PROJECT_NAME}-config DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME})
 
 ###########
 # Testing #
