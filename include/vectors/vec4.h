@@ -10,8 +10,6 @@
 
 #include <algorithm>
 
-#include "vectors/vec2.h"
-
 namespace oo {
 
     template<class T>
@@ -23,35 +21,13 @@ namespace oo {
 
             struct {
 
-                T x, y;
-
-                union {
-
-                    struct {
-
-                        T width, height;
-
-                    };
-
-                    struct {
-
-                        T z, w;
-
-                    };
-
-                };
+                T x, y, width, height;
 
             };
 
             struct {
 
                 T left, bottom, right, top;
-
-            };
-
-            struct {
-
-                vec2<T> origin, size;
 
             };
 
@@ -68,8 +44,6 @@ namespace oo {
         explicit vec4(T s);
 
         vec4(T x, T y, T width, T height);
-
-        vec4(const vec2<T> &o, const vec2<T> &s);
 
         // -- Destructor --
 
@@ -106,20 +80,6 @@ namespace oo {
         vec4 &operator/=(const vec4 &v);
 
         vec4 &operator/=(T s);
-
-        // Rectangle operations
-
-        T get_min_x() const;
-
-        T get_max_x() const;
-
-        T get_min_y() const;
-
-        T get_max_y() const;
-
-        void merge(const vec4 &v);
-
-        bool contains(const vec2<T> &v) const;
 
     };
 
