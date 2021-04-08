@@ -23,5 +23,4 @@ endfunction()
 #
 
 add("test_vec2")
-add("test_vec3")
 add("test_vec4")

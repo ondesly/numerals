@@ -25,8 +25,6 @@ set(INCLUDE_DIR ${CMAKE_CURRENT_LIST_DIR}/include)
 set(PUBLIC_HEADERS
         ${INCLUDE_DIR}/vectors/vec2.h
         ${INCLUDE_DIR}/vectors/vec2.inl
-        ${INCLUDE_DIR}/vectors/vec3.h
-        ${INCLUDE_DIR}/vectors/vec3.inl
         ${INCLUDE_DIR}/vectors/vec4.h
         ${INCLUDE_DIR}/vectors/vec4.inl)
 
