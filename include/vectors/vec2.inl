@@ -127,23 +127,6 @@ namespace oo {
         return *this = vec2(x / s, y / s);
     }
 
-    // -- Vector operations --
-
-    template<class T, class S>
-    inline T vec2<T, S>::get_length() const {
-        return std::sqrt(x * x + y * y);
-    }
-
-    template<class T, class S>
-    inline T vec2<T, S>::get_distance(const vec2 <T, S> &v) const {
-        return (*this - v).get_length();
-    }
-
-    template<class T, class S>
-    inline vec2 <T, S> vec2<T, S>::get_midpoint(const vec2 <T, S> &v) const {
-        return vec2((x + v.x) / 2.F, (y + v.y) / 2.F);
-    }
-
     // -- Binary operators --
 
     template<class T, class S>

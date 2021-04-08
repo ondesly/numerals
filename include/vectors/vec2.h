@@ -86,14 +86,6 @@ namespace oo {
 
         vec2 &operator/=(S s);
 
-        // -- Vector operations --
-
-        T get_length() const;
-
-        T get_distance(const vec2 &v) const;
-
-        vec2 get_midpoint(const vec2 &v) const;
-
     };
 
     // -- Binary operators --
